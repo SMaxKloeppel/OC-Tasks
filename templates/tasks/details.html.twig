@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Item {{ task.todo }} {% endblock %}
+
+{% block body %}
+<div class="todo">
+    <h1>{{ task.todo }}</h1>
+    <p>{{ task.details }}</p>
+</div>
+
+{% endblock %}

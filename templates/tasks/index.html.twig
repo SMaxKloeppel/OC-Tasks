@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% if tasks %}
+    <div class="wrapper" id="tasklist">
+        {% for task in tasks %}
+        <div class="box a"><a href="/task/{{ task.id }}">{{ task.todo }}</a></div>
+        <div class="box b"><a href="/task/edit/{{ task.id }}" title="Edit"><i class="material-icons">edit</i></a></div>
+        <div class="box c"><a href="#" class="delete-task" data-id="{{ task.id }}" title="Delete"><i class="material-icons">delete</i></a></div>
+        </li>
+        {% endfor %}
+    </div>
+    {% else %}
+       <p>No tasks.</p>
+
+    {% endif %}
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="/js/task.js"></script>
+{% endblock %}

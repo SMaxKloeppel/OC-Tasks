@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Task List{% endblock %}</title>
+        <link rel="stylesheet" href="/todo.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div class="container">
+        <p><a href="/" title="List/Home"><i class="material-icons" style="font-size:40px;">list</i></a> 
+            <a href="/task/new"  title="New" style="float:right"><i class="material-icons" style="font-size:40px;">fiber_new</i></a></p>
+
+        {% block body %}{% endblock %}
+        </div>
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
