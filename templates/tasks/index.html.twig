@@ -4,7 +4,7 @@
     <div class="wrapper" id="tasklist">
         {% for task in tasks %}
         <div class="box a"><a href="/task/{{ task.id }}">{{ task.todo }}</a></div>
-        <div class="box b"><a href="/task/edit/{{ task.id }}" title="Edit"><i class="material-icons">edit</i></a></div>
+        <div class="box b"><a href="/task/edit/{{ task.id }}" title="Edit"><i class="material-icons e">edit</i></a></div>
         <div class="box c"><a href="#" class="delete-task" title="Delete"><i class="material-icons" data-id="{{ task.id }}">delete</i></a></div>
         </li>
         {% endfor %}
